@@ -1,0 +1,39 @@
+$mainColor: #061B28;
+$contrastText: #FCFCFC;
+$btnColor: #EC5118;
+
+@mixin list-box ($direction:row) {
+    display: flex;
+    flex-direction: $direction;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+@mixin links ($color:inherit) {
+    color: $color;
+    text-decoration: none;
+
+    &:hover {
+        color: $contrastText;
+    }
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: $mainColor;
+    font-size: 18px;
+    line-height: 150%;
+}
+
+%titles {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 900;
+    margin: 0;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1170px;
+    padding: 0 25px;
+}
